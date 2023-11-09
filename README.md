@@ -26,12 +26,10 @@ Clone the Repository: Clone the project repository to your local machine.
 Install Dependencies: Install the required Python dependencies using pip:
 
 
-"""
-pip install pyopenpgp flask
-"""
+First run the command to install the dependencies.
+**pip install pyopenpgp flask**
 
-"""
+Run the program using the command listed below.
 python app.py
-"""
 
 Access the Application: Open a web browser and navigate to http://localhost:5000.
