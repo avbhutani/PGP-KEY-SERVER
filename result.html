@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PGP Key Server</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background: url('https://wallpapercave.com/wp/wp5162474.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333; /* Text color */
+        }
+        .custom-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+        .custom-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .custom-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Hover effect - slightly larger size */
+        }
+        .custom-h1 {
+            font-family: 'Montserrat', sans-serif; /* Custom font */
+        }
+        .custom-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        .custom-link:hover {
+            text-decoration: underline; /* Hover effect - underlined link */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 custom-container animated zoomIn">
+        <h1 class="display-4 text-center custom-h1">PGP Key Server</h1>
+        <h1 class="text-center custom-h1">PGP Key for {{ email }}</h1>
+        {% if pgp_key %}
+            <pre>{{ pgp_key }}</pre>
+        {% else %}
+            <p class="text-center">No PGP key found for the provided email.</p>
+        {% endif %}
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery and Popper.js first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
